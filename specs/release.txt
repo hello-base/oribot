@@ -10,6 +10,9 @@ Total Sales (overrides weekly calculations)
 Highest Weekly Rank (usually first week)
 Proposed way to verify (ex: URL or photo)
 
+Is Re-release?
+Original release ID input
+
 Related to:
 - Oricon Daily
 - Oricon Weekly
@@ -17,3 +20,4 @@ Related to:
 Feature:
 - Derive total sales from weekly sales
 - Derive highest weekly rank achieved
+- If re-release, create relation to original release
