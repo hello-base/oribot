@@ -1,0 +1,12 @@
+ORICON YEARLY (ALBUM)
+
+Year
+Yearly Sales (overrides Weekly Sales calculation)
+Rank
+
+Related to:
+- Release
+- Oricon Weekly
+
+Feature:
+- Derive total sales from Oricon Weekly weeks completed before year end

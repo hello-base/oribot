@@ -1,0 +1,13 @@
+ORICON WEEKLY (SINGLE)
+
+Week Starting
+Week Ending
+Weekly Sales (overrides Daily Sales calculation)
+Rank
+
+Related to:
+- Release
+- Oricon Daily
+
+Feature:
+- Derive total sales from Oricon Daily for week duration

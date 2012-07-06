@@ -1,0 +1,19 @@
+RELEASE
+
+Single or Album
+Artist
+Release Title (Romanized)
+Release Title (Japanese)
+Release Date
+Cover art
+Total Sales (overrides weekly calculations)
+Highest Weekly Rank (usually first week)
+Proposed way to verify (ex: URL or photo)
+
+Related to:
+- Oricon Daily
+- Oricon Weekly
+
+Feature:
+- Derive total sales
+- Derive highest weekly rank achieved
