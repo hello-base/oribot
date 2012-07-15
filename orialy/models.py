@@ -17,10 +17,13 @@ class Entry(models.Model):
 
 class Daily(Entry):
     release = models.ForeignKey(Release, related_name='dailies')
+    date = models.DateField()
 
 
 class Weekly(Entry):
     release = models.ForeignKey(Release, related_name='weeklies')
+    date_starting = models.DateField()
+    date_ending = models.DateField()
 
 
 class Yearly(Entry):
