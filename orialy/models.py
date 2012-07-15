@@ -10,9 +10,13 @@ class Entry(models.Model):
     rank = models.IntegerField(blank=True, null=True)
 
 
-class Weekly(models.Model):
-    pass
+class Daily(Entry):
+    release = models.ForeignKey(Release, related_name='dailies')
 
 
-class Yearly(models.Model):
-    pass
+class Weekly(Entry):
+    release = models.ForeignKey(Release, related_name='weeklies')
+
+
+class Yearly(Entry):
+    release = models.ForeignKey(Release, related_name='yearlies')
