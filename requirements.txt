@@ -1,1 +1,4 @@
 django-models-utils == 1.1.0
+
+# Unversioned Checkouts
+https://github.com/toastdriven/django-tastypie/zipball/master
