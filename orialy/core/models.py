@@ -6,7 +6,8 @@ from model_utils import Choices, TimeStampedModel
 
 
 class Artist(models.Model):
-    pass
+    name = models.CharField(max_length=255)
+    kanji = models.CharField(max_length=255)
 
 
 class Release(TimeStampedModel):
