@@ -1,7 +1,8 @@
 # Package Requirements for Production
 django == 1.4
 django-models-utils == 1.1.0
-dj-database-url==0.2.0
+dj-database-url == 0.2.0
+psycopg2 == 2.4.5
 
 # Unversioned Checkouts
 https://github.com/toastdriven/django-tastypie/zipball/master
