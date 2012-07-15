@@ -1,13 +1,24 @@
 from django.db import models
-from django.db.models import Sum
+from django.db.models import Max, Sum
+
+from model_utils import Choices
 
 
 class Release(models.Model):
+    KIND = Choices(('album', 'Album'), ('single', 'Single'))
+
+    name = models.CharField(max_length=255)
+    kanji = models.CharField(max_length=255)
+    kind = models.CharField(choices=KIND, default=KIND.single, max_length=6)
+
     def __unicode__(self):
         return u'%s' % (self.name)
 
-    def daily_sales(self):
-        return self.dailies.annotate(total=Sum('sales'))
+    def sales(self):
+        return self.weeklies.annotate(total=Sum('sales'))
+
+    def highest_weekly_rank(self):
+        return self.weeklies.annotate(total=Max('rank'))
 
 
 class Entry(models.Model):
