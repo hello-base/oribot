@@ -15,7 +15,7 @@ class Release(TimeStampedModel):
 
     parent = models.ForeignKey('self')
     kind = models.CharField(choices=KIND, default=KIND.single, max_length=6)
-    artist = models.ForeignKey(Artist)
+    artist = models.ForeignKey(Artist, related_name='releases')
 
     name = models.CharField(max_length=255)
     kanji = models.CharField(max_length=255)
