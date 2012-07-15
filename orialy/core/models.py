@@ -9,6 +9,9 @@ class Artist(models.Model):
     name = models.CharField(max_length=255)
     kanji = models.CharField(max_length=255)
 
+    def __unicode__(self):
+        return u'%s' % (self.name)
+
 
 class Release(TimeStampedModel):
     KIND = Choices(('album', 'Album'), ('single', 'Single'))
