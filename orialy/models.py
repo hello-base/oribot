@@ -37,6 +37,7 @@ class Weekly(Entry):
 
 class Yearly(Entry):
     release = models.ForeignKey(Release, related_name='yearlies')
+    date_starting = models.DateField()
 
     def __unicode__(self):
         return u'%s: Year' % (self.release.name)
