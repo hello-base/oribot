@@ -4,12 +4,19 @@ from django.db.models import Max, Sum
 from model_utils import Choices
 
 
+class Artist(models.Model):
+    pass
+
+
 class Release(models.Model):
     KIND = Choices(('album', 'Album'), ('single', 'Single'))
 
+    kind = models.CharField(choices=KIND, default=KIND.single, max_length=6)
+    artist = models.ForeignKey(Artist)
+
     name = models.CharField(max_length=255)
     kanji = models.CharField(max_length=255)
-    kind = models.CharField(choices=KIND, default=KIND.single, max_length=6)
+    released = models.DateField()
 
     def __unicode__(self):
         return u'%s' % (self.name)
