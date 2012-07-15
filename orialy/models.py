@@ -11,6 +11,7 @@ class Artist(models.Model):
 class Release(models.Model):
     KIND = Choices(('album', 'Album'), ('single', 'Single'))
 
+    parent = models.ForeignKey('self')
     kind = models.CharField(choices=KIND, default=KIND.single, max_length=6)
     artist = models.ForeignKey(Artist)
 
