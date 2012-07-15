@@ -1,3 +1,5 @@
+# Package Requirements for Production
+django == 1.4
 django-models-utils == 1.1.0
 
 # Unversioned Checkouts
