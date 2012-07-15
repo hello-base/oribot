@@ -1,14 +1,14 @@
 from django.db import models
 from django.db.models import Max, Sum
 
-from model_utils import Choices
+from model_utils import Choices, TimeStampedModel
 
 
 class Artist(models.Model):
     pass
 
 
-class Release(models.Model):
+class Release(TimeStampedModel):
     KIND = Choices(('album', 'Album'), ('single', 'Single'))
 
     parent = models.ForeignKey('self')
@@ -29,7 +29,7 @@ class Release(models.Model):
         return self.weeklies.aggregate(total=Max('rank'))
 
 
-class Entry(models.Model):
+class Entry(TimeStampedModel):
     sales = models.IntegerField(blank=True, null=True)
     rank = models.IntegerField(blank=True, null=True)
 
