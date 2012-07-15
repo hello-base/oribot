@@ -60,3 +60,7 @@ class Yearly(Entry):
 
     def __unicode__(self):
         return u'%s: Year' % (self.release.name)
+
+
+def recalculate(created, instance, **kwargs):
+    pass
