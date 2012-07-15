@@ -26,7 +26,7 @@ class Release(models.Model):
         return self.weeklies.annotate(total=Sum('sales'))
 
     def highest_weekly_rank(self):
-        return self.weeklies.annotate(total=Max('rank'))
+        return self.weeklies.aggregate(total=Max('rank'))
 
 
 class Entry(models.Model):
