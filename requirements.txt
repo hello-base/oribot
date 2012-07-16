@@ -1,6 +1,6 @@
 # Package Requirements for Production
 django == 1.4
-django-models-utils == 1.1.0
+django-model-utils == 1.1.0
 dj-database-url == 0.2.0
 psycopg2 == 2.4.5
 
