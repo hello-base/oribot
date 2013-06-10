@@ -7,7 +7,8 @@ from model_utils import Choices, TimeStampedModel
 
 class Artist(models.Model):
     name = models.CharField(max_length=255)
-    kanji = models.CharField(max_length=255)
+    romanized_name = models.CharField(max_length=255)
+    slug = models.SlugField()
 
     def __unicode__(self):
         return u'%s' % (self.name)
@@ -21,8 +22,9 @@ class Release(TimeStampedModel):
     artist = models.ForeignKey(Artist, related_name='releases')
 
     name = models.CharField(max_length=255)
-    kanji = models.CharField(max_length=255)
+    romanized_name = models.CharField(max_length=255)
     released = models.DateField()
+    slug = models.SlugField()
 
     def __unicode__(self):
         return u'%s' % (self.name)
